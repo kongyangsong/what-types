@@ -4,6 +4,7 @@ import server from 'rollup-plugin-serve'
 import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
 import replace from 'rollup-plugin-replace'
+import typescript from '@rollup/plugin-typescript';
 
 const isDev = () => {
     return process.env.NODE_ENV === 'development'
@@ -25,6 +26,12 @@ export default {
     ],
     plugins: [
         ts(),
+        typescript({
+            declaration: true,
+            declarationDir: path.resolve(__dirname, 'types'),
+            rootDir: './src',
+            exclude: ['**/*.test.ts', '**/*.spec.ts', 'tests/**/*']
+        }),
         terser(),
         isDev && livereload(),
         replace({

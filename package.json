@@ -28,6 +28,7 @@
   "author": "kongyangsong",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-typescript": "^11.0.0",
     "cross-env": "^7.0.3",
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-node-resolve": "^5.2.0",
@@ -36,5 +37,8 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.1",
     "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "what-types": "^0.0.4"
   }
 }
