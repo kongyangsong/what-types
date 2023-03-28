@@ -28,7 +28,7 @@ export default {
         ts(),
         typescript({
             declaration: true,
-            declarationDir: path.resolve(__dirname, 'types'),
+            outDir: './lib',
             rootDir: './src',
             exclude: ['**/*.test.ts', '**/*.spec.ts', 'tests/**/*']
         }),

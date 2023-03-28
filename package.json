@@ -1,6 +1,6 @@
 {
   "name": "what-types",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A tool to judge type with high compatibility",
   "main": "./lib/index.umd.js",
   "module": "./lib/index.es.js",
@@ -10,7 +10,7 @@
       "require": "./lib/index.umd.js"
     }
   },
-  "types": "./lib/types/index.d.ts",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cross-env NODE_ENV=development rollup -c",
@@ -40,6 +40,6 @@
     "typescript": "^4.5.5"
   },
   "dependencies": {
-    "what-types": "^0.0.4"
+    "what-types": "^0.0.6"
   }
 }
