@@ -1,14 +1,24 @@
 {
   "name": "what-types",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A tool to judge type with high compatibility",
-  "main": "index.js",
+  "main": "./lib/index.umd.js",
+  "module": "./lib/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./lib/index.es.js",
+      "require": "./lib/index.umd.js"
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cross-env NODE_ENV=development rollup -c",
     "dev": "cross-env NODE_ENV=production rollup -c -w",
     "production": "cross-env NODE_ENV=production rollup -c"
   },
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "type",
     "judge",

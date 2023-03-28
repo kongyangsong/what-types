@@ -10,12 +10,19 @@ const isDev = () => {
 }
 
 export default {
-    input: './src/index.js',
-    output: {
-        file: path.resolve(__dirname, './lib/index.js'),
-        format: 'umd',
-        name: "type",
-    },
+    input: './src/index.ts',
+    output: [
+        {
+            file: path.resolve(__dirname, './lib/index.umd.js'),
+            format: 'umd',
+            name: "type",
+        },
+        {
+            file: path.resolve(__dirname, './lib/index.es.js'),
+            format: 'es',
+            name: "type",
+        },
+    ],
     plugins: [
         ts(),
         terser(),
